@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benjamin C. Tompkins — Cybersecurity Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2EEZTXGRTP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2EEZTXGRTP');
+</script>
+<style>
+  :root {
+    --bg: #080c14;
+    --bg2: #0d1420;
+    --bg3: #111b2e;
+    --border: rgba(0,200,180,0.15);
+    --accent: #00c8b4;
+    --accent2: #3b82f6;
+    --accent3: #f59e0b;
+    --text: #e8edf5;
+    --text2: #8da0b8;
+    --text3: #4a6080;
+    --glow: rgba(0,200,180,0.12);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Lora', Georgia, serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NOISE TEXTURE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 900;
+    padding: 1.2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(8,12,20,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text2);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 3rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,200,180,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,200,180,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent);
+  }
+
+  .hero-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,200,180,0.08) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    max-width: 900px;
+  }
+
+  .hero-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 span { color: var(--accent); }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--text2);
+    max-width: 560px;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .stat-item { text-align: left; }
+
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.25rem;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.8rem;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--bg);
+    border: 1px solid var(--accent);
+    font-weight: 500;
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--accent);
+    box-shadow: 0 0 20px var(--glow);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--text2);
+    border: 1px solid var(--border);
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 6rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--text2);
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .about-text p strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .about-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .badge-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.2rem 1.5rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .badge-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 24px var(--glow);
+  }
+
+  .badge-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  .badge-val {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  /* TIMELINE */
+  #timeline { padding: 6rem 3rem; max-width: 1100px; margin: 0 auto; }
+
+  .timeline-list { position: relative; padding-left: 2rem; }
+
+  .timeline-list::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+  }
+
+  .tl-item {
+    position: relative;
+    padding: 0 0 3rem 2.5rem;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .tl-dot {
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+  }
+
+  .tl-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+  }
+
+  .tl-role {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .tl-org {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text2);
+    margin-bottom: 0.75rem;
+  }
+
+  .tl-desc {
+    color: var(--text2);
+    font-size: 0.92rem;
+    max-width: 680px;
+  }
+
+  .tl-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+
+  .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--text3);
+    letter-spacing: 0.05em;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .skill-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.5rem;
+    transition: all 0.25s;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .skill-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 28px var(--glow);
+    transform: translateY(-3px);
+  }
+
+  .skill-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .skill-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+
+  .skill-desc {
+    font-size: 0.85rem;
+    color: var(--text2);
+    line-height: 1.6;
+  }
+
+  /* CERTS */
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .cert-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.2rem;
+    text-align: center;
+    transition: all 0.2s;
+  }
+
+  .cert-card:hover {
+    border-color: var(--accent3);
+    box-shadow: 0 0 20px rgba(245,158,11,0.1);
+  }
+
+  .cert-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+
+  .cert-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .cert-year {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text3);
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* CHATBOT */
+  #chat-section {
+    padding: 6rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .chat-container {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 60px rgba(0,200,180,0.06);
+  }
+
+  .chat-header {
+    background: var(--bg3);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .chat-indicator {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .chat-header-text {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text2);
+  }
+
+  .chat-header-text strong { color: var(--accent); }
+
+  .chat-messages {
+    height: 420px;
+    overflow-y: auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    scroll-behavior: smooth;
+  }
+
+  .chat-messages::-webkit-scrollbar { width: 4px; }
+  .chat-messages::-webkit-scrollbar-track { background: transparent; }
+  .chat-messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .msg {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 85%;
+    animation: msgIn 0.3s ease;
+  }
+
+  @keyframes msgIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .msg.user { align-self: flex-end; flex-direction: row-reverse; }
+
+  .msg-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .msg.assistant .msg-avatar {
+    background: rgba(0,200,180,0.15);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .msg.user .msg-avatar {
+    background: rgba(59,130,246,0.15);
+    border: 1px solid var(--accent2);
+    color: var(--accent2);
+  }
+
+  .msg-bubble {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .msg.assistant .msg-bubble {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  .msg.user .msg-bubble {
+    background: rgba(59,130,246,0.12);
+    border: 1px solid rgba(59,130,246,0.25);
+    color: var(--text);
+  }
+
+  .typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 0.75rem 1rem;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    width: fit-content;
+  }
+
+  .typing-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: typingBounce 1.2s infinite;
+  }
+
+  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes typingBounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-6px); opacity: 1; }
+  }
+
+  .chat-input-area {
+    border-top: 1px solid var(--border);
+    padding: 1rem 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .chat-input {
+    flex: 1;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.7rem 1rem;
+    color: var(--text);
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .chat-input:focus { border-color: var(--accent); }
+  .chat-input::placeholder { color: var(--text3); }
+
+  .chat-send {
+    background: var(--accent);
+    border: none;
+    border-radius: 4px;
+    padding: 0.7rem 1.2rem;
+    color: var(--bg);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .chat-send:hover { background: #00e5cf; box-shadow: 0 0 16px var(--glow); }
+  .chat-send:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .chat-prompts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0 1.5rem 1rem;
+  }
+
+  .prompt-chip {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    padding: 0.35rem 0.75rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: var(--text3);
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.04em;
+  }
+
+  .prompt-chip:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* API KEY NOTICE */
+  .api-notice {
+    background: rgba(245,158,11,0.08);
+    border: 1px solid rgba(245,158,11,0.25);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: #f59e0b;
+    line-height: 1.6;
+  }
+
+  .api-key-input-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .api-key-input {
+    flex: 1;
+    background: var(--bg);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    outline: none;
+  }
+
+  .api-key-btn {
+    background: rgba(245,158,11,0.15);
+    border: 1px solid rgba(245,158,11,0.4);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    color: #f59e0b;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .api-key-btn:hover { background: rgba(245,158,11,0.25); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .footer-left {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text3);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer-links a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--text3);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--accent); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    #hero { padding: 6rem 1.5rem 3rem; }
+    section, #timeline, #chat-section { padding: 4rem 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+
+  /* SCROLL FADE */
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#hero">// btompkins</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#timeline">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certs">Credentials</a></li>
+    <li><a href="#chat-section">Ask Me</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero" style="max-width:100%; padding-top:8rem;">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Cybersecurity Leader · Greater Boston Area</div>
+    <h1>Ben <span>Tompkins</span></h1>
+    <p class="hero-sub">Building secure systems, leading high-stakes teams, and turning complexity into clarity — for over two decades.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">TS/SCI</div>
+        <div class="stat-label">Clearance</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">FBI · DoD</div>
+        <div class="stat-label">Federal Service</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">MIT</div>
+        <div class="stat-label">Data Science / AI</div>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#chat-section" class="btn btn-primary">Ask me anything →</a>
+      <a href="#timeline" class="btn btn-ghost">View my story</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">Who I Am</div>
+  <h2>Security engineer.<br>Operator. Builder.</h2>
+  <div class="about-grid">
+    <div class="about-text fade-in">
+      <p>I've spent over two decades at the intersection of <strong>security engineering, automation, and leadership</strong> — from hardening DoD networks in the Rhode Island Air National Guard to architecting vulnerability management programs at a global hedge fund.</p>
+      <p>My career started in the trenches — as a Marine Corps Communications Technician, then progressing through security analyst, engineer, consultant, and program manager roles at organizations like the <strong>FBI, Sourcefire, VeriSign, and Arrowstreet Capital</strong>.</p>
+      <p>What sets me apart is the combination: I can <strong>write the Python that automates the thing</strong>, architect the cloud security platform, lead the team executing it, and then present the risk story to the board. Most engineers do one or two of those. I do all of them.</p>
+      <p>I hold an <strong>MIT Applied Data Science / AI certification</strong> (2024), and I'm actively applying AI and machine learning to security problems — from LLM-based alert triage to recommendation systems for risk prioritization.</p>
+    </div>
+    <div class="about-badges fade-in">
+      <div class="badge-card">
+        <div class="badge-title">Current Role</div>
+        <div class="badge-val">Sr. Cyber Security Engineer — RAFT LLC (DoD / Air Force Kessel Run)</div>
+      </div>
+      <div class="badge-card">
+        <div class="badge-title">Security Clearance</div>
+        <div class="badge-val">Top Secret / SCI with Full Scope Poly</div>
+      </div>
+      <div class="badge-card">
+        <div class="badge-title">Military Service</div>
+        <div class="badge-val">USMC (Active Duty) + RI Air National Guard (17 years)</div>
+      </div>
+      <div class="badge-card">
+        <div class="badge-title">Education</div>
+        <div class="badge-val">MIT Applied Data Science · B.S. Technical Mgmt, DeVry</div>
+      </div>
+      <div class="badge-card">
+        <div class="badge-title">Location</div>
+        <div class="badge-val">Greater Boston Area · Open to Remote / Hybrid</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- TIMELINE -->
+<section id="timeline" style="max-width:1100px; margin:0 auto; padding: 6rem 3rem;">
+  <div class="section-label">Career History</div>
+  <h2>20+ years of building,<br>defending, and leading.</h2>
+  <div class="timeline-list">
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">Dec 2023 — Present</div>
+      <div class="tl-role">Senior Cyber Security Engineer</div>
+      <div class="tl-org">RAFT LLC · DoD / US Air Force Kessel Run</div>
+      <div class="tl-desc">Providing security engineering and accreditation oversight for the DoD. Built cross-team workflows for security initiative tracking. Conducted continuous AWS vulnerability scanning (Security Hub, Inspector, Config, Prowler) and automated compliance verification checks. Created ATO documentation including SSPs and POA&Ms.</div>
+      <div class="tl-tags">
+        <span class="tag">AWS GovCloud</span><span class="tag">Security Hub</span><span class="tag">ATO / FedRAMP</span><span class="tag">SSP / POA&M</span><span class="tag">DevSecOps</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">Jun 2022 — Dec 2023</div>
+      <div class="tl-role">Cyber Security Specialist (Director)</div>
+      <div class="tl-org">Arrowstreet Capital LP · Financial Services</div>
+      <div class="tl-desc">Built the vulnerability management program from the ground up. Managed Rapid7 InsightVM across 17 teams, Kubernetes, and AWS ECR. Designed a custom Jira risk assessment workflow, conducted CASB and VCDR proofs of concept, led incident response, and delivered KRI metrics to senior leadership.</div>
+      <div class="tl-tags">
+        <span class="tag">Rapid7 InsightVM</span><span class="tag">Kubernetes</span><span class="tag">SDLC Security</span><span class="tag">IR / EDR / SOAR</span><span class="tag">Vendor Risk</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">Feb 2017 — Jun 2022</div>
+      <div class="tl-role">Data Pipeline Systems Engineer / Team Lead / FSO</div>
+      <div class="tl-org">AlienOne Security LLC · DoD Support</div>
+      <div class="tl-desc">Multi-role position: senior engineer, team lead, and Facility Security Officer for a DoD contractor. Architected real-time big data analytics pipelines using Kafka, KSQL, and StreamSets. Led a 250+ server DevOps orchestration build with Python Fabric. Developed Docker/OpenShift container workflows and Ansible automation. Validated a Kafka MDHA proof of concept for AWS cloud migration.</div>
+      <div class="tl-tags">
+        <span class="tag">Kafka / KSQL</span><span class="tag">Docker / OpenShift</span><span class="tag">Python / Ansible</span><span class="tag">GitLab CI/CD</span><span class="tag">DoD STIG</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">Dec 2014 — Feb 2017</div>
+      <div class="tl-role">Network Security Manager / Security Advisor</div>
+      <div class="tl-org">CVS Caremark · Enterprise Security</div>
+      <div class="tl-desc">Led a team of four security engineers managing the organization's security architecture and day-to-day operations. Served as SME on the Sourcefire Next-Generation Intrusion Prevention System (NGIPS), with secondary support for WebSense, FireEye, and AirDefense. Conducted security architecture reviews and GAP analyses, optimized IPS policies to reduce false positives, and coordinated with the SOC, Networking, and Risk Management teams. Delivered weekly and monthly security metrics to senior executives.</div>
+      <div class="tl-tags">
+        <span class="tag">Sourcefire NGIPS</span><span class="tag">FireEye</span><span class="tag">Team Lead</span><span class="tag">Security Architecture</span><span class="tag">GAP Analysis</span><span class="tag">Executive Reporting</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">Oct 2013 — Dec 2014</div>
+      <div class="tl-role">IA Operations Program Manager</div>
+      <div class="tl-org">Federal Bureau of Investigations (FBI) · Washington, DC</div>
+      <div class="tl-desc">Directed the FBI's Enterprise Security Operations Center, overseeing four teams: Digital Forensics, Advanced Analysis & Intel, Vulnerability Assessment & Pen Testing, and 24/7 Watchfloor. Managed SIEM, IDS/IPS, and Patch Management operations. Ensured FISMA compliance and aligned the security program with executive strategic goals.</div>
+      <div class="tl-tags">
+        <span class="tag">SOC Leadership</span><span class="tag">SIEM</span><span class="tag">FISMA</span><span class="tag">Pen Testing</span><span class="tag">Digital Forensics</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">Aug 2009 — Feb 2013</div>
+      <div class="tl-role">Senior Security Consultant</div>
+      <div class="tl-org">Sourcefire Inc. · Professional Services</div>
+      <div class="tl-desc">Subject Matter Expert on Sourcefire IPS/Snort platforms, primarily embedded at FBI ESOC. Architected and deployed a Full Packet Capture solution at the Trusted Internet Connection across three classification enclaves. Developed custom detection methodologies, traffic profiles, and delivered weekly security training to FBI personnel.</div>
+      <div class="tl-tags">
+        <span class="tag">Sourcefire / Snort</span><span class="tag">Full Packet Capture</span><span class="tag">IPS Architecture</span><span class="tag">Detection Engineering</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">Oct 2004 — Aug 2009</div>
+      <div class="tl-role">Security Engineer III / Senior Security Analyst</div>
+      <div class="tl-org">VeriSign Managed Security Services</div>
+      <div class="tl-desc">Advanced from SOC analyst to Offering Engineer on Sourcefire and TippingPoint IDS/IPS platforms. Managed day-to-day SOC operations, built a QA lab and DR site, provided Tier IV support on 24/7 rotation, and mentored junior engineers. Delivered client-facing IR and security platform training.</div>
+      <div class="tl-tags">
+        <span class="tag">Managed Security</span><span class="tag">IDS/IPS</span><span class="tag">SOC Operations</span><span class="tag">Incident Response</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">Jan 2002 — Jan 2019</div>
+      <div class="tl-role">Security Operations Team Lead</div>
+      <div class="tl-org">Rhode Island Air National Guard · 102nd Network Warfare Squadron</div>
+      <div class="tl-desc">Seventeen years serving under DISA conducting Advanced Threat Analysis on DoD networks worldwide. CERT member, penetration testing reviewer, SIEM operator, and IDS technician. Performed DISA STIG Gold Disk script testing.</div>
+      <div class="tl-tags">
+        <span class="tag">DISA</span><span class="tag">Threat Analysis</span><span class="tag">CERT</span><span class="tag">STIG</span><span class="tag">TS/SCI</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">Nov 1997 — Nov 2001</div>
+      <div class="tl-role">Communication Technician (Communications Chief)</div>
+      <div class="tl-org">United States Marine Corps · 2nd LAR Weapons Company</div>
+      <div class="tl-desc">Active duty Communications Chief responsible for $10M+ in mobile and ground communications equipment. Managed satellite, UHF/VHF/HF, and cryptographic communications systems under strict security protocols. Created SOPs and built the organization's communications inventory tracking system.</div>
+      <div class="tl-tags">
+        <span class="tag">USMC</span><span class="tag">Cryptography</span><span class="tag">RF / Satellite Comms</span><span class="tag">Active Duty</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">Core Competencies</div>
+  <h2>What I bring<br>to the table.</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-icon">🛡️</div>
+      <div class="skill-name">Vulnerability Management</div>
+      <div class="skill-desc">Built enterprise VM programs from scratch at Arrowstreet (Rapid7 InsightVM, 17 teams) and RAFT (AWS-native). End-to-end ownership: scanning policy, SLAs, remediation workflows, and KRI reporting.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">⚙️</div>
+      <div class="skill-name">Security Automation</div>
+      <div class="skill-desc">Python, Bash, Ansible, and API-driven tooling. Automated configuration audits, compliance verification, metrics collection, and remediation workflows across 250+ server environments.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">☁️</div>
+      <div class="skill-name">Cloud Security (AWS)</div>
+      <div class="skill-desc">Security Hub, Inspector, IAM, Config, GuardDuty, Access Analyzer, GovCloud. Operated across financial services and DoD compliance-sensitive AWS environments.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🔁</div>
+      <div class="skill-name">DevSecOps / Pipeline Security</div>
+      <div class="skill-desc">GitLab CI/CD, Docker, Kubernetes, OpenShift, Artifactory/JFrog, AWS ECR. Integrates security into SDLC from commit to container — not bolted on at the end.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">📡</div>
+      <div class="skill-name">Detection Engineering</div>
+      <div class="skill-desc">20 years of SIEM optimization, IDS/IPS tuning, custom Snort signatures, behavioral detections, and MITRE ATT&CK-aligned detection pipelines across commercial and federal environments.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🚨</div>
+      <div class="skill-name">Incident Response</div>
+      <div class="skill-desc">Executed IR at every level — from SOC analyst to FBI ESOC Program Manager. Tools: WAF, Full Packet Capture, SOAR, EDR, DLP. Built IR procedures adopted by federal agencies.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🏗️</div>
+      <div class="skill-name">Security Architecture</div>
+      <div class="skill-desc">Designed Full Packet Capture across three FBI classification enclaves. Architected IPS at VeriSign. Led VCDR and CASB evaluations at Arrowstreet. Systems thinker with two decades of deployment context.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">📊</div>
+      <div class="skill-name">Big Data & Analytics Pipelines</div>
+      <div class="skill-desc">Kafka, KSQL, KStreams, StreamSets, Confluent Platform. Designed real-time security analytics pipelines for DoD global situational awareness. Led Kafka MDHA proof of concept for cloud migration.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">👥</div>
+      <div class="skill-name">Security Leadership</div>
+      <div class="skill-desc">Led teams from 4 to 11 engineers at FBI, Dell SecureWorks, CVS Caremark, and AlienOne. Aligns security programs with executive strategy, budgets, and organizational OKRs.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">📋</div>
+      <div class="skill-name">Compliance & Regulatory</div>
+      <div class="skill-desc">FISMA, NIST 800-53, CIS, SOC2, DoD DISA STIGs, FedRAMP. ATO/SSP/POA&M documentation. Compliance as an operational discipline, not a checkbox.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🤖</div>
+      <div class="skill-name">AI & Applied Data Science</div>
+      <div class="skill-desc">MIT certified. LLM-based triage, automated alert summarization, AI-enabled detection tuning, EDA, recommendation systems. Applying data science to security problems before most teams are asking the question.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🎯</div>
+      <div class="skill-name">Penetration Testing & Red Team</div>
+      <div class="skill-desc">CEH certified. Led FBI's Vulnerability Assessment & Pen Testing team. Deployed Caldera adversary emulation at Arrowstreet. DISA-qualified penetration tester and Air National Guard CERT member.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CERTS -->
+<section id="certs">
+  <div class="section-label">Credentials</div>
+  <h2>Certifications &<br>Education</h2>
+  <div class="certs-grid fade-in">
+    <div class="cert-card">
+      <div class="cert-icon">🎓</div>
+      <div class="cert-name">MIT Applied Data Science & AI</div>
+      <div class="cert-year">2024 · MIT Professional Education</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🔐</div>
+      <div class="cert-name">CompTIA Security+</div>
+      <div class="cert-year">2024</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🛡️</div>
+      <div class="cert-name">GIAC Incident Handler (GCIH)</div>
+      <div class="cert-year">2016 · #27249</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🏰</div>
+      <div class="cert-name">GIAC Enterprise Defender (GCED)</div>
+      <div class="cert-year">2016 · #1989</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">⚔️</div>
+      <div class="cert-name">Certified Ethical Hacker (CEH)</div>
+      <div class="cert-year">2011 · EC-Council</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🌐</div>
+      <div class="cert-name">CompTIA Network+</div>
+      <div class="cert-year">2004</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">📚</div>
+      <div class="cert-name">B.S. Technical Management / CIS</div>
+      <div class="cert-year">DeVry University · 2010</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">⚡</div>
+      <div class="cert-name">A.S. Electrical Technology</div>
+      <div class="cert-year">New England Institute of Technology</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CHATBOT -->
+<section id="chat-section">
+  <div class="section-label">AI-Powered Q&A</div>
+  <h2>Have a question?<br>Ask my AI assistant.</h2>
+  <p style="color:var(--text2); margin-bottom: 2rem; font-size:0.95rem; max-width:600px;">This chatbot knows my full career history, skills, and background. Employers and recruiters are welcome to ask anything — it's powered by Claude AI.</p>
+
+  <div class="api-notice" id="apiNotice">
+    ⚠️ <strong>API Key Required</strong> — To activate the chatbot, enter your Anthropic API key below. Keys are stored only in your browser session and never sent anywhere except directly to Anthropic's API. Get a key at <strong>console.anthropic.com</strong>
+    <div class="api-key-input-wrapper">
+      <input type="password" class="api-key-input" id="apiKeyInput" placeholder="sk-ant-...">
+      <button class="api-key-btn" onclick="saveApiKey()">Activate →</button>
+    </div>
+  </div>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="chat-indicator"></div>
+      <div class="chat-header-text"><strong>Ben's AI Assistant</strong> — Ask me about Ben's experience, skills, or background</div>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg assistant">
+        <div class="msg-avatar">BT</div>
+        <div class="msg-bubble">Hi! I'm Ben's AI assistant. I know his full career history, technical skills, certifications, and background. Whether you're a recruiter, hiring manager, or just curious — feel free to ask me anything about Ben's experience.</div>
+      </div>
+    </div>
+
+    <div class="chat-prompts">
+      <button class="prompt-chip" onclick="sendPrompt(this)">What's Ben's cloud security experience?</button>
+      <button class="prompt-chip" onclick="sendPrompt(this)">Has Ben held leadership roles?</button>
+      <button class="prompt-chip" onclick="sendPrompt(this)">What clearances does Ben hold?</button>
+      <button class="prompt-chip" onclick="sendPrompt(this)">Tell me about Ben's AI skills</button>
+      <button class="prompt-chip" onclick="sendPrompt(this)">What makes Ben unique as a candidate?</button>
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" class="chat-input" id="chatInput" placeholder="Ask about Ben's experience, skills, or background..." onkeydown="if(event.key==='Enter') sendMessage()">
+      <button class="chat-send" id="sendBtn" onclick="sendMessage()">Send →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">© 2025 Benjamin C. Tompkins · Greater Boston Area · btompkins56@gmail.com · (401) 662-1325</div>
+  <div class="footer-links">
+    <a href="https://linkedin.com/in/ben-tompkins-37254611" target="_blank">LinkedIn</a>
+    <a href="/cdn-cgi/l/email-protection#92f0e6fdffe2f9fbfce1a7a4d2f5fff3fbfebcf1fdff">Email</a>
+    <a href="https://eportfolio.mygreatlearning.com/ben-tompkins" target="_blank">MIT Portfolio</a>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ─── SUPABASE SETUP ───────────────────────────────────────────
+const SUPABASE_URL = 'https://zevbeldduigkpwwrukkx.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpldmJlbGRkdWlna3B3d3J1a2t4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxMTA0NjEsImV4cCI6MjA4ODY4NjQ2MX0.bZ8wM7p7WkdocfxGGkvkpBNFl31-TETS88K1j3mg-to';
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+// Generate a unique session ID per browser visit
+const SESSION_ID = 'sess_' + Math.random().toString(36).substr(2, 12) + '_' + Date.now();
+let questionNumber = 0;
+
+async function logToSupabase(question, answer) {
+  try {
+    questionNumber++;
+    await supabase.from('chatlog').insert([{
+      session_id: SESSION_ID,
+      question: question,
+      answer: answer,
+      question_number: questionNumber
+    }]);
+  } catch (err) {
+    // Silent fail — logging should never break the chat experience
+    console.warn('Supabase log error:', err);
+  }
+}
+
+// ─── KNOWLEDGE BASE ───────────────────────────────────────────
+const BEN_KNOWLEDGE = `
+You are an AI assistant representing Benjamin C. Tompkins, a senior cybersecurity professional. 
+Answer questions about Ben in a professional, confident, and informative way. 
+Speak in third person about Ben (e.g., "Ben has..." or "Ben's experience includes...").
+Be specific and cite real examples from his career when relevant.
+Keep answers concise but substantive — 2-4 paragraphs maximum unless asked for more detail.
+
+ABOUT BEN:
+Benjamin C. Tompkins is a Senior Cybersecurity Engineer with 20+ years of experience across Federal, DoD, financial services, and enterprise environments. He is based in the Greater Boston Area and is open to remote or hybrid work. Contact: btompkins56@gmail.com / (401) 662-1325. LinkedIn: linkedin.com/in/ben-tompkins-37254611
+
+CURRENT ROLE:
+Senior Cyber Security Engineer at RAFT LLC (December 2023 – Present). Supporting the Department of Defense / US Air Force Kessel Run Project. Focus on Security Accreditation and Oversight, ATO documentation (SSP, POA&M), continuous AWS vulnerability scanning using Security Hub, Inspector, Config, and Prowler. Developed automated compliance verification checks and cross-team security workflows.
+
+PREVIOUS EXPERIENCE:
+1. Arrowstreet Capital LP (June 2022 – December 2023) - Cyber Security Specialist at Director level. Built the vulnerability management program from scratch. Managed Rapid7 InsightVM across 17 teams. Secured GitLab pipelines, containers, Artifactory/JFrog, AWS ECR. Led CASB and VCDR proof of concepts. Conducted SaaS and vendor risk assessments. Designed custom Jira security workflow. Led incident response using WAF, Full Packet Capture, SOAR, EDR, DLP. Delivered KRI metrics to senior leadership.
+
+2. AlienOne Security LLC (February 2017 – June 2022) - Full Data Pipeline Systems Engineer / Team Lead / Facility Security Officer. Designed real-time big data analytics pipelines using Kafka, KSQL, KStreams, StreamSets, Confluent Platform. Large-scale DevOps orchestration with Python Fabric across 250+ servers. Docker/OpenShift container development and GitLab CI/CD pipelines. Ansible automation. Kafka MDHA proof of concept for AWS migration. DoD DISA STIG hardening. Served as FSO for DoD contractor across multiple locations.
+
+3. CVS Caremark (December 2014 – February 2017) - Network Security Manager / Security Advisor. Led team of 4 security engineers. Sourcefire NGIPS SME. Security architecture reviews and GAP analysis. Coordinated with SOC, Networking, Risk Management. Executive security metrics reporting.
+
+4. Dell SecureWorks (October 2014 – June 2015) - Network Security Engineering Manager. Managed 11 engineers. Budget management (CAPEX/OPEX). Cross-functional collaboration with Product Management, QA, Software Engineering.
+
+5. Federal Bureau of Investigations / FBI (February 2013 – December 2014) - IA Operations Program Manager / IT Supervisory Specialist. Directed FBI's Enterprise Security Operations Center. Managed 4 teams: Mobile Security & Digital Forensics, Advanced Analysis & Intel, Vulnerability Assessment & Pen Testing, 24/7 Security Operations Watchfloor. Managed SIEM, IDS/IPS, Enterprise Patch Management. Ensured FISMA compliance. Also served as Senior Security Engineer at FBI ESOC: designed Full Packet Capture at Trusted Internet Connection across 3 classification enclaves.
+
+6. Sourcefire Inc. (August 2009 – February 2013) - Senior Security Consultant. SME on Sourcefire IPS/RNA/RUA/Snort. Long-term FBI ESOC engagement. Designed Full Packet Capture solution. Custom detection methodologies, traffic profiling, weekly knowledge transfer to FBI staff.
+
+7. VeriSign Managed Security Services (October 2004 – August 2009) - Security Engineer III / Senior Security Analyst. Offering Engineer for Sourcefire and TippingPoint IDS/IPS. SOC operations, Tier IV support, QA lab, DR site. Client-facing incident response. Mentored junior engineers.
+
+8. Rhode Island Air National Guard, 102nd Network Warfare Squadron (January 2002 – January 2019, 17 years) - Security Operations Team Lead. Advanced Threat Analysis on DoD networks under DISA. SIEM operations. IDS provisioning. CERT member. Penetration testing reviewer. DISA STIG Gold Disk script testing.
+
+9. United States Marine Corps, 2nd LAR Weapons Company (November 1997 – November 2001) - Communication Technician / Communications Chief. Managed $10M+ communications equipment. Satellite, UHF/VHF/HF, cryptographic communications. Created SOPs. Active duty.
+
+SECURITY CLEARANCE:
+Top Secret / SCI with Full Scope Polygraph (held at FBI). Currently holds TS clearance. Experienced with classified environments and DoD security requirements.
+
+CORE TECHNICAL SKILLS:
+- Vulnerability Management: Rapid7 InsightVM, AWS Security Hub/Inspector/Config/Prowler, SDLC pipeline security
+- Security Automation: Python, Bash, Ansible, AWS Lambda, Terraform, API-driven tooling, GitLab CI/CD
+- Cloud Security: AWS (Security Hub, Inspector, IAM, Config, GuardDuty, Access Analyzer, GovCloud)
+- DevSecOps: Docker, Kubernetes, OpenShift, GitLab CI/CD, Artifactory/JFrog, AWS ECR
+- Detection Engineering: SIEM optimization, IDS/IPS tuning, Snort, MITRE ATT&CK, Rapid7, Cisco NGIPS, Cortex XDR
+- Big Data: Kafka, KSQL, KStreams, StreamSets, Confluent Platform
+- Incident Response: WAF, Full Packet Capture, IDS/IPS, SOAR, EDR, DLP, digital forensics
+- Security Architecture: network architecture design, GAP analysis, device placement, security reviews
+- Compliance: FISMA, NIST 800-53, CIS, SOC2, DoD DISA STIGs, ATO/SSP/POA&M, FedRAMP
+- AI / Data Science: MIT certified, LLM-based triage, automated alert summarization, EDA, recommendation systems
+
+LEADERSHIP EXPERIENCE:
+- FBI ESOC: Program Manager overseeing 4 operational teams
+- Dell SecureWorks: Engineering Manager of 11 engineers
+- CVS Caremark: Team lead of 4 security engineers
+- AlienOne: Team lead of developers and on-site engineers
+- Air National Guard: Security Operations Team Lead (17 years)
+
+CERTIFICATIONS:
+- MIT Applied Data Science / AI for Decision-Making (2024)
+- CompTIA Security+ (2024)
+- GIAC Certified Incident Handler (GCIH) #27249 (2016)
+- GIAC Certified Enterprise Defender (GCED) #1989 (2016)
+- Certified Ethical Hacker (CEH) (2011)
+- CompTIA Network+ (2004), A+ (2003)
+
+EDUCATION:
+- MIT Applied Data Science Program: Leveraging AI for Effective Decision-Making (2024)
+- B.S. Technical Management (Computer Information Systems), DeVry University (2010)
+- A.S. Electrical Technology, New England Institute of Technology
+
+UNIQUE DIFFERENTIATORS:
+1. Rare combination of deep technical skills + leadership experience + AI/data science capabilities
+2. Both hands-on engineer AND program manager — can write the Python AND present to the board
+3. Federal/DoD AND commercial/financial services experience
+4. Active military service (17 years RIANG + USMC) bringing discipline and mission focus
+5. MIT AI certification positions him at the leading edge of AI-augmented security operations
+6. Full TS/SCI clearance with Poly — rare and highly valuable
+7. Proven builder: created VM programs, detection pipelines, and security frameworks from scratch
+
+PERSONALITY / WORK STYLE:
+Mission-focused, performance-driven, enjoys complex challenges, works well in teams, bridges technical depth with executive communication. Values automation, efficiency, and continuous improvement. Military background brings structure and discipline.
+`;
+
+// ─── STATE ────────────────────────────────────────────────────
+let apiKey = '';
+let chatHistory = [];
+
+function saveApiKey() {
+  const input = document.getElementById('apiKeyInput');
+  if (input.value.startsWith('sk-ant-')) {
+    apiKey = input.value.trim();
+    document.getElementById('apiNotice').style.display = 'none';
+    addMessage('assistant', "API key activated! I'm ready to answer questions about Ben. What would you like to know?");
+  } else {
+    alert('Please enter a valid Anthropic API key (starts with sk-ant-)');
+  }
+}
+
+function sendPrompt(el) {
+  const text = el.textContent.trim();
+  document.getElementById('chatInput').value = text;
+  sendMessage();
+}
+
+async function sendMessage() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  if (!apiKey) {
+    addMessage('assistant', "Please enter your Anthropic API key in the field above to activate the chatbot.");
+    return;
+  }
+
+  input.value = '';
+  addMessage('user', text);
+  chatHistory.push({ role: 'user', content: text });
+
+  const sendBtn = document.getElementById('sendBtn');
+  sendBtn.disabled = true;
+
+  const typingId = showTyping();
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: BEN_KNOWLEDGE,
+        messages: chatHistory
+      })
+    });
+
+    const data = await response.json();
+    removeTyping(typingId);
+
+    if (data.content && data.content[0]) {
+      const reply = data.content[0].text;
+      chatHistory.push({ role: 'assistant', content: reply });
+      addMessage('assistant', reply);
+      await logToSupabase(text, reply);
+      gtag('event', 'chatbot_question', {
+        'event_category': 'Chatbot',
+        'event_label': text.substring(0, 100)
+      });
+    } else if (data.error) {
+      addMessage('assistant', `Error: ${data.error.message}. Please check your API key.`);
+    }
+  } catch (err) {
+    removeTyping(typingId);
+    addMessage('assistant', 'Connection error. Please check your API key and try again.');
+  }
+
+  sendBtn.disabled = false;
+  input.focus();
+}
+
+function addMessage(role, text) {
+  const container = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = `msg ${role}`;
+  div.innerHTML = `
+    <div class="msg-avatar">${role === 'assistant' ? 'BT' : 'You'}</div>
+    <div class="msg-bubble">${text.replace(/\n/g, '<br>')}</div>
+  `;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function showTyping() {
+  const container = document.getElementById('chatMessages');
+  const id = 'typing-' + Date.now();
+  const div = document.createElement('div');
+  div.className = 'msg assistant';
+  div.id = id;
+  div.innerHTML = `
+    <div class="msg-avatar">BT</div>
+    <div class="typing-indicator">
+      <div class="typing-dot"></div>
+      <div class="typing-dot"></div>
+      <div class="typing-dot"></div>
+    </div>
+  `;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+  return id;
+}
+
+function removeTyping(id) {
+  const el = document.getElementById(id);
+  if (el) el.remove();
+}
+
+// ─── SCROLL ANIMATIONS ────────────────────────────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) {
+      el.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1
